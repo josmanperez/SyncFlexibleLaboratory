@@ -1,0 +1,31 @@
+{
+  "appId": "tiered-cclek",
+  "video-kvyxb": {
+    "subscriptions": {
+      "Oldies": {
+        "class": "MovieDetail",
+        "filter": "year <= 2000"
+      },
+      "Spielberg": {
+        "class": "MovieDetail",
+        "filter": "director CONTAINS[c] 'Spielberg'"
+      }
+    }
+  },
+  "tiered-cclek": {
+    "subscriptions": {
+      "priority": {
+        "class": "Item",
+        "filter": "priority > 2"
+      },
+      "allItems": {
+        "class": "Item",
+        "filter": ""
+      },
+      "justMine": {
+        "class": "Item",
+        "filter": "owner_id == 6447955a93e9eb5fc6bdad03"
+      }
+    }
+  }
+}
