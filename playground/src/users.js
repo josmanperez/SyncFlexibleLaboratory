@@ -54,11 +54,6 @@ async function logIn() {
     );
 
     const app = getApp();
-    if (app.currentUser != null) {
-      closeRealm();
-      await app.currentUser.logOut();
-    }
-
     const user = await app.logIn(credentials);
 
     if (user) {
@@ -186,7 +181,11 @@ function getAuthedUser() {
 async function getCustomUserData(refresh) {
   if (refresh)
     await getApp().currentUser.refreshCustomData();
-  console.table(getAuthedUser().customData)
+  
+  const user = getAuthedUser();
+
+  console.log(`User ${user.profile.name ?? (user.profile.email ?? '<Unknown>')}`);
+  console.table(user.customData)
 }
 
 async function showCustomDataOptions() {
