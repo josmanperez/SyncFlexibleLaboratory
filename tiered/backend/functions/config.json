@@ -1,11 +1,5 @@
 [
     {
-        "name": "deleteAllItems",
-        "private": false,
-        "run_as_system": true,
-        "disable_arg_logs": true
-    },
-    {
         "name": "joinTeam",
         "private": false,
         "run_as_system": true
@@ -17,5 +11,16 @@
     {
         "name": "resetFunc",
         "private": true
+    },
+    {
+        "name": "addCollaborator",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "deleteAllItems",
+        "private": false,
+        "run_as_system": true,
+        "disable_arg_logs": true
     }
 ]

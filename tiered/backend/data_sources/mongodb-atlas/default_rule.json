@@ -36,11 +36,19 @@
                     }
                 }
             },
-            "read": true,
-            "write": true,
+            "fields": {
+                "isHidden": {
+                    "write": false,
+                    "read": false
+                }
+            },
             "insert": true,
             "delete": true,
-            "search": true
+            "search": true,
+            "additional_fields": {
+                "write": true,
+                "read": true
+            }
         }
     ]
 }

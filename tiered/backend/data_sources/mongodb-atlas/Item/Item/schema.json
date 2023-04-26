@@ -1,31 +1,30 @@
 {
-  "bsonType": "object",
-  "properties": {
-    "_id": {
-      "bsonType": "objectId"
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "isHidden": {
+            "bsonType": "bool"
+        },
+        "name": {
+            "bsonType": "string"
+        },
+        "owner_id": {
+            "bsonType": "string"
+        },
+        "priority": {
+            "bsonType": "int"
+        },
+        "team": {
+            "bsonType": "string"
+        }
     },
-    "isHidden": {
-      "bsonType": "bool"
-    },
-    "name": {
-      "bsonType": "string"
-    },
-    "owner_id": {
-      "bsonType": "string"
-    },
-    "team": {
-      "bsonType": "string"
-    },
-    "priority": {
-      "bsonType": "int"
-    }
-  },
-  "required": [
-    "_id",
-    "owner_id",
-    "name",
-    "isHidden",
-    "team"
-  ],
-  "title": "Item"
+    "required": [
+        "_id",
+        "owner_id",
+        "name",
+        "team"
+    ],
+    "title": "Item"
 }
