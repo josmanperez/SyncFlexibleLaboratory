@@ -24,7 +24,7 @@ const ItemSchema = {
   name: "Item",
   properties: {
     _id: 'objectId',
-    isHidden: 'bool',
+    isHidden: 'bool?',
     name: 'string',
     owner_id: 'string',
     team: 'string',
@@ -68,8 +68,7 @@ export const tieredExample = async () => {
   await setUpAdmin();
   await setUpGreenMember();
   await setUpBlueMember();
-  //await canAdminEdit();
-  //await canMemberEdit();
+
 };
 
 const setUpAdmin = async () => {
@@ -145,8 +144,7 @@ const setUpGreenMember = async () => {
       owner_id: member.id,
       name: "GreenTeam Member created this",
       team: "greenTeam",
-      priority: 4,
-      isHidden: false
+      priority: 4
     });
     memberDoc2Id = new BSON.ObjectID();
     realm.create("Item", {
@@ -154,8 +152,7 @@ const setUpGreenMember = async () => {
       owner_id: member.id,
       name: "GreenTeam Member created this, too",
       team: "greenTeam",
-      priority: 2,
-      isHidden: false
+      priority: 2
     });
   });
 
@@ -189,8 +186,7 @@ const setUpBlueMember = async () => {
       owner_id: member.id,
       name: "BlueTeam Member created this",
       team: "blueTeam",
-      priority: 1,
-      isHidden: false
+      priority: 1
     });
     memberDoc2Id = new BSON.ObjectID();
     realm.create("Item", {
@@ -198,8 +194,7 @@ const setUpBlueMember = async () => {
       owner_id: member.id,
       name: "BlueTeam Member created this, too",
       team: "blueTeam",
-      priority: 2,
-      isHidden: false
+      priority: 2
     });
   });
 
